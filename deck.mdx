@@ -1,7 +1,8 @@
-import { Notes } from "mdx-deck";
-import { Appear, Image, Head } from "@mdx-deck/components";
+import { Notes, Appear, Image, Head } from "mdx-deck";
+import { swiss, syntaxHighlighter } from "@mdx-deck/themes";
 
-export { default as theme } from "./src/theme";
+import theme from './theme'
+export const themes = theme
 
 <Head>
   <title>Symbols complicated it all – Robin Pokorny</title>
@@ -84,14 +85,14 @@ sym === Symbol();
 ## What for?
 
 ```js
-const sym = Symbol()
+const sym = Symbol();
 
 const o = {
   name: "My key is a string",
   [sym]: "My key is a symbol"
-}
+};
 
-o[sym]
+o[sym];
 // -> "My key is a symbol"
 ```
 
@@ -168,7 +169,9 @@ Object.defineProperty(o, d, { value: 20 });
 
 ---
 
-<img src={require("file-loader!./images/enum-symbol.png")} />
+import enumSymbol from "./images/enum-symbol.png";
+
+<img src={enumSymbol} />
 
 ---
 
@@ -322,7 +325,9 @@ const isAdmin = ({ [ROLE]: role }) => role === "admin";
 
 # 👋
 
-<img src={require('file-loader!./images/youtube.png')} width="80" />
+import youtube from "./images/youtube.png";
+
+<img src={youtube} width="80" />
 <a href="https://www.youtube.com/c/robinpokorny">/robinpokorny</a>
 
 [symbols-complicated-it-all.netlify.com](http://symbols-complicated-it-all.netlify.com/)
