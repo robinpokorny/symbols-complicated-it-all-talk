@@ -1,6 +1,6 @@
 import React from "react";
 import { useDeck } from "mdx-deck";
-import { swiss, syntaxHighlighter } from "@mdx-deck/themes";
+import { swiss, syntaxHighlighterPrism } from "mdx-deck/themes";
 
 const Provider = ({ children }) => {
   const { index, length } = useDeck();
@@ -50,4 +50,4 @@ const Provider = ({ children }) => {
   );
 };
 
-export default [swiss, syntaxHighlighter, { Provider }];
+export default [swiss, syntaxHighlighterPrism, { Provider }];
