@@ -6,10 +6,9 @@
   "author": "Robin Pokorny",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "yarn build:site && yarn build:pdf && yarn build:preview",
+    "build": "yarn build:site && yarn build:preview",
     "build:site": "mdx-deck build deck.mdx",
-    "build:preview": "mdx-deck-export png deck.mdx",
-    "build:pdf": "mdx-deck-export pdf deck.mdx",
+    "build:preview": "cp images/presentation.png dist/",
     "start": "mdx-deck deck.mdx",
     "format": "prettier --write '{,!(dist)/**/}*.{js,json,mdx}'"
   },
