@@ -14,7 +14,7 @@ const Provider = ({ children, index, length }) => (
         justifyContent: "space-between"
       }}
     >
-      <span>Node.js Meetup #34</span>
+      <span>The Cake is a Lie @ Klarna</span>
       <a
         style={{ color: "#f00", textDecoration: "none" }}
         href="https://twitter.com/robinpokorny"
